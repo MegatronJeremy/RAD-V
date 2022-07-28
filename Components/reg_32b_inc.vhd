@@ -22,10 +22,13 @@ begin
 			q_reg <= (others => '0');
 		elsif (rising_edge(clk)) then
 			if (ld = '1') then
-				q_reg <= d_in;
-			end if;
-			if (inc = '1') then
-				q_reg <= std_logic_vector(unsigned(q_reg) + 1) ;
+				case inc is
+					when '0' => q_reg <= d_in;
+					when '1' => q_reg <= std_logic_vector(unsigned(d_in) + 1);
+					when others => q_reg <= (others => 'X');
+				end case;
+			elsif (inc = '1') then
+			   q_reg <= std_logic_vector(unsigned(q_reg) + 1);
 			end if;
 		end if;
 	end process;
