@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<preferences>
+ <debug showDebugMenu="0" />
+ <systemtable>
+  <columns>
+   <connections preferredWidth="47" />
+   <irq preferredWidth="34" />
+  </columns>
+ </systemtable>
+ <clocktable>
+  <columns>
+   <clockname preferredWidth="170" />
+   <clocksource preferredWidth="170" />
+   <frequency preferredWidth="151" />
+  </columns>
+ </clocktable>
+ <window width="1100" height="800" x="301" y="60" />
+ <library
+   expandedCategories="Library/Peripherals,Library/Microcontroller Peripherals,Library/Memories and Memory Controllers/External Memory Interfaces,Library,Library/Memories and Memory Controllers/External Memory Interfaces/Flash Interfaces,Library/Memories and Memory Controllers/On-Chip,Library/Memories and Memory Controllers,Project" />
+</preferences>
