@@ -40,11 +40,11 @@ begin
   begin
     case func is
       when ALU_ADD =>
-			if neg_b = '0' then
-				c <= std_logic_vector(unsigned(a) + unsigned(b));
-			else
-				c <= std_logic_vector(unsigned(a) - unsigned(b));
-			end if;
+			  if neg_b = '0' then
+				  c <= std_logic_vector(unsigned(a) + unsigned(b));
+			  else
+				  c <= std_logic_vector(unsigned(a) - unsigned(b));
+			  end if;
       when ALU_SLT =>
         c <= (others => '0');
         if signed(a) < signed(b) then
