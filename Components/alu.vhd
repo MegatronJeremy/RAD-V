@@ -24,8 +24,6 @@ architecture beh of alu is
   constant ALU_AND : std_logic_vector(2 downto 0) := "111";
 
   signal padding : std_logic_vector(15 downto 0);
-  signal b_reg : std_logic_vector(31 downto 0);
-
 begin
 
   process (a, arithm)
@@ -37,37 +35,32 @@ begin
     end if;
   end process;
 
-  process (b, neg_b)
-  begin
-    if neg_b = '1' then
-      b_reg <= std_logic_vector(unsigned(not b) + x"00000001");
-    else
-      b_reg <= b;
-    end if;
-  end process;
-
-  process (func, a, b, b_reg, padding)
+  process (func, a, b, neg_b, padding)
     variable t : std_logic_vector(31 downto 0);
   begin
     case func is
       when ALU_ADD =>
-        c <= std_logic_vector(unsigned(a) + unsigned(b_reg));
+			  if neg_b = '0' then
+				  c <= std_logic_vector(unsigned(a) + unsigned(b));
+			  else
+				  c <= std_logic_vector(unsigned(a) - unsigned(b));
+			  end if;
       when ALU_SLT =>
         c <= (others => '0');
-        if signed(a) < signed(b_reg) then
+        if signed(a) < signed(b) then
           c(0) <= '1';
         end if;
       when ALU_SLTU =>
         c <= (others => '0');
-        if unsigned(a) < unsigned(b_reg) then
+        if unsigned(a) < unsigned(b) then
           c(0) <= '1';
         end if;
       when ALU_XOR =>
-        c <= a xor b_reg;
+        c <= a xor b;
       when ALU_OR =>
-        c <= a or b_reg;
+        c <= a or b;
       when ALU_AND =>
-        c <= a and b_reg;
+        c <= a and b;
       when ALU_SHL | ALU_SHR =>
         -- Swap bit order if shifting to the right --
         if func = ALU_SHR then
