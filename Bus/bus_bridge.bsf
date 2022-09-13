@@ -1,0 +1,246 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+/*
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+*/
+(header "symbol" (version "1.1"))
+(symbol
+	(rect 16 16 328 352)
+	(text "bus_bridge" (rect 5 0 48 12)(font "Arial" ))
+	(text "inst" (rect 8 320 20 332)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "cpu_bus_addr[31..0]" (rect 0 0 81 12)(font "Arial" ))
+		(text "cpu_bus_addr[31..0]" (rect 21 27 102 39)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32)(line_width 3))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "cpu_bus_width[1..0]" (rect 0 0 77 12)(font "Arial" ))
+		(text "cpu_bus_width[1..0]" (rect 21 43 98 55)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48)(line_width 3))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "cpu_bus_dout[31..0]" (rect 0 0 80 12)(font "Arial" ))
+		(text "cpu_bus_dout[31..0]" (rect 21 59 101 71)(font "Arial" ))
+		(line (pt 0 64)(pt 16 64)(line_width 3))
+	)
+	(port
+		(pt 0 80)
+		(input)
+		(text "cpu_bus_write" (rect 0 0 57 12)(font "Arial" ))
+		(text "cpu_bus_write" (rect 21 75 78 87)(font "Arial" ))
+		(line (pt 0 80)(pt 16 80)(line_width 1))
+	)
+	(port
+		(pt 0 96)
+		(input)
+		(text "cpu_bus_enable" (rect 0 0 64 12)(font "Arial" ))
+		(text "cpu_bus_enable" (rect 21 91 85 103)(font "Arial" ))
+		(line (pt 0 96)(pt 16 96)(line_width 1))
+	)
+	(port
+		(pt 0 112)
+		(input)
+		(text "m0_window_base[31..0]" (rect 0 0 94 12)(font "Arial" ))
+		(text "m0_window_base[31..0]" (rect 21 107 115 119)(font "Arial" ))
+		(line (pt 0 112)(pt 16 112)(line_width 3))
+	)
+	(port
+		(pt 0 128)
+		(input)
+		(text "m0_window_mask[31..0]" (rect 0 0 97 12)(font "Arial" ))
+		(text "m0_window_mask[31..0]" (rect 21 123 118 135)(font "Arial" ))
+		(line (pt 0 128)(pt 16 128)(line_width 3))
+	)
+	(port
+		(pt 0 144)
+		(input)
+		(text "m0_bus_busy" (rect 0 0 59 12)(font "Arial" ))
+		(text "m0_bus_busy" (rect 21 139 80 151)(font "Arial" ))
+		(line (pt 0 144)(pt 16 144)(line_width 1))
+	)
+	(port
+		(pt 0 160)
+		(input)
+		(text "m0_bus_read_data[31..0]" (rect 0 0 102 12)(font "Arial" ))
+		(text "m0_bus_read_data[31..0]" (rect 21 155 123 167)(font "Arial" ))
+		(line (pt 0 160)(pt 16 160)(line_width 3))
+	)
+	(port
+		(pt 0 176)
+		(input)
+		(text "m1_window_base[31..0]" (rect 0 0 93 12)(font "Arial" ))
+		(text "m1_window_base[31..0]" (rect 21 171 114 183)(font "Arial" ))
+		(line (pt 0 176)(pt 16 176)(line_width 3))
+	)
+	(port
+		(pt 0 192)
+		(input)
+		(text "m1_window_mask[31..0]" (rect 0 0 96 12)(font "Arial" ))
+		(text "m1_window_mask[31..0]" (rect 21 187 117 199)(font "Arial" ))
+		(line (pt 0 192)(pt 16 192)(line_width 3))
+	)
+	(port
+		(pt 0 208)
+		(input)
+		(text "m1_bus_busy" (rect 0 0 57 12)(font "Arial" ))
+		(text "m1_bus_busy" (rect 21 203 78 215)(font "Arial" ))
+		(line (pt 0 208)(pt 16 208)(line_width 1))
+	)
+	(port
+		(pt 0 224)
+		(input)
+		(text "m1_bus_read_data[31..0]" (rect 0 0 101 12)(font "Arial" ))
+		(text "m1_bus_read_data[31..0]" (rect 21 219 122 231)(font "Arial" ))
+		(line (pt 0 224)(pt 16 224)(line_width 3))
+	)
+	(port
+		(pt 0 240)
+		(input)
+		(text "m2_window_base[31..0]" (rect 0 0 94 12)(font "Arial" ))
+		(text "m2_window_base[31..0]" (rect 21 235 115 247)(font "Arial" ))
+		(line (pt 0 240)(pt 16 240)(line_width 3))
+	)
+	(port
+		(pt 0 256)
+		(input)
+		(text "m2_window_mask[31..0]" (rect 0 0 97 12)(font "Arial" ))
+		(text "m2_window_mask[31..0]" (rect 21 251 118 263)(font "Arial" ))
+		(line (pt 0 256)(pt 16 256)(line_width 3))
+	)
+	(port
+		(pt 0 272)
+		(input)
+		(text "m2_bus_busy" (rect 0 0 59 12)(font "Arial" ))
+		(text "m2_bus_busy" (rect 21 267 80 279)(font "Arial" ))
+		(line (pt 0 272)(pt 16 272)(line_width 1))
+	)
+	(port
+		(pt 0 288)
+		(input)
+		(text "m2_bus_read_data[31..0]" (rect 0 0 102 12)(font "Arial" ))
+		(text "m2_bus_read_data[31..0]" (rect 21 283 123 295)(font "Arial" ))
+		(line (pt 0 288)(pt 16 288)(line_width 3))
+	)
+	(port
+		(pt 312 32)
+		(output)
+		(text "cpu_bus_busy" (rect 0 0 60 12)(font "Arial" ))
+		(text "cpu_bus_busy" (rect 231 27 291 39)(font "Arial" ))
+		(line (pt 312 32)(pt 296 32)(line_width 1))
+	)
+	(port
+		(pt 312 48)
+		(output)
+		(text "cpu_bus_din[31..0]" (rect 0 0 74 12)(font "Arial" ))
+		(text "cpu_bus_din[31..0]" (rect 217 43 291 55)(font "Arial" ))
+		(line (pt 312 48)(pt 296 48)(line_width 3))
+	)
+	(port
+		(pt 312 64)
+		(output)
+		(text "m0_bus_addr[31..2]" (rect 0 0 80 12)(font "Arial" ))
+		(text "m0_bus_addr[31..2]" (rect 211 59 291 71)(font "Arial" ))
+		(line (pt 312 64)(pt 296 64)(line_width 3))
+	)
+	(port
+		(pt 312 80)
+		(output)
+		(text "m0_bus_enable" (rect 0 0 63 12)(font "Arial" ))
+		(text "m0_bus_enable" (rect 228 75 291 87)(font "Arial" ))
+		(line (pt 312 80)(pt 296 80)(line_width 1))
+	)
+	(port
+		(pt 312 96)
+		(output)
+		(text "m0_bus_write_mask[3..0]" (rect 0 0 105 12)(font "Arial" ))
+		(text "m0_bus_write_mask[3..0]" (rect 186 91 291 103)(font "Arial" ))
+		(line (pt 312 96)(pt 296 96)(line_width 3))
+	)
+	(port
+		(pt 312 112)
+		(output)
+		(text "m0_bus_write_data[31..0]" (rect 0 0 102 12)(font "Arial" ))
+		(text "m0_bus_write_data[31..0]" (rect 189 107 291 119)(font "Arial" ))
+		(line (pt 312 112)(pt 296 112)(line_width 3))
+	)
+	(port
+		(pt 312 128)
+		(output)
+		(text "m1_bus_addr[31..2]" (rect 0 0 79 12)(font "Arial" ))
+		(text "m1_bus_addr[31..2]" (rect 212 123 291 135)(font "Arial" ))
+		(line (pt 312 128)(pt 296 128)(line_width 3))
+	)
+	(port
+		(pt 312 144)
+		(output)
+		(text "m1_bus_enable" (rect 0 0 62 12)(font "Arial" ))
+		(text "m1_bus_enable" (rect 229 139 291 151)(font "Arial" ))
+		(line (pt 312 144)(pt 296 144)(line_width 1))
+	)
+	(port
+		(pt 312 160)
+		(output)
+		(text "m1_bus_write_mask[3..0]" (rect 0 0 103 12)(font "Arial" ))
+		(text "m1_bus_write_mask[3..0]" (rect 188 155 291 167)(font "Arial" ))
+		(line (pt 312 160)(pt 296 160)(line_width 3))
+	)
+	(port
+		(pt 312 176)
+		(output)
+		(text "m1_bus_write_data[31..0]" (rect 0 0 101 12)(font "Arial" ))
+		(text "m1_bus_write_data[31..0]" (rect 190 171 291 183)(font "Arial" ))
+		(line (pt 312 176)(pt 296 176)(line_width 3))
+	)
+	(port
+		(pt 312 192)
+		(output)
+		(text "m2_bus_addr[31..2]" (rect 0 0 80 12)(font "Arial" ))
+		(text "m2_bus_addr[31..2]" (rect 211 187 291 199)(font "Arial" ))
+		(line (pt 312 192)(pt 296 192)(line_width 3))
+	)
+	(port
+		(pt 312 208)
+		(output)
+		(text "m2_bus_enable" (rect 0 0 63 12)(font "Arial" ))
+		(text "m2_bus_enable" (rect 228 203 291 215)(font "Arial" ))
+		(line (pt 312 208)(pt 296 208)(line_width 1))
+	)
+	(port
+		(pt 312 224)
+		(output)
+		(text "m2_bus_write_mask[3..0]" (rect 0 0 105 12)(font "Arial" ))
+		(text "m2_bus_write_mask[3..0]" (rect 186 219 291 231)(font "Arial" ))
+		(line (pt 312 224)(pt 296 224)(line_width 3))
+	)
+	(port
+		(pt 312 240)
+		(output)
+		(text "m2_bus_write_data[31..0]" (rect 0 0 102 12)(font "Arial" ))
+		(text "m2_bus_write_data[31..0]" (rect 189 235 291 247)(font "Arial" ))
+		(line (pt 312 240)(pt 296 240)(line_width 3))
+	)
+	(drawing
+		(rectangle (rect 16 16 296 320)(line_width 1))
+	)
+)
